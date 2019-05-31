@@ -15,9 +15,9 @@ fn main () {
     io::stdin().read_line(&mut answer)
         .expect("Can't read shit");
     /******There is a a problem in this segment of code for the match statement */
-    match answer {
-        Yes => {list.push(addon())}, 
-        No => {println!("Thank you for your time")},
+    match &answer as &str {
+        "Yes" => {list.push(addon())}, 
+        "No" => {println!("Thank you for your time")},
         _ => println!("Type something else"),
     }
     /********End of Segment********/
@@ -49,7 +49,7 @@ fn u_age () -> i32 {
     println!("Please type in your age");
     let mut input = String::new();
     io::stdin().read_line(&mut input)
-        .expect("Can't read age");
+        .expect("Can't read name");
     io::stdout().flush().unwrap(); 
     let input :i32 = input.trim().parse()
         .expect("Can't read age");
