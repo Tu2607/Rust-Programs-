@@ -49,7 +49,7 @@ fn u_age () -> i32 {
     println!("Please type in your age");
     let mut input = String::new();
     io::stdin().read_line(&mut input)
-        .expect("Can't read name");
+        .expect("Can't read age");
     io::stdout().flush().unwrap(); 
     let input :i32 = input.trim().parse()
         .expect("Can't read age");
