@@ -13,7 +13,7 @@ fn main () {
     println!("Do you want to add some information? Type yes if you do");
     let mut answer = String::new();
     io::stdin().read_line(&mut answer)
-        .expect("Can't read shit");
+        .expect("Can't read it!");
     /******There is a a problem in this segment of code for the match statement */
     match &answer as &str {
         "Yes" => {list.push(addon())}, 
